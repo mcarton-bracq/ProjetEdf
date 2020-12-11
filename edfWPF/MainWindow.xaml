@@ -1,0 +1,30 @@
+﻿<Window x:Class="edfWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:edfWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Authentification" FontSize="30"></TextBlock>
+
+        <StackPanel Orientation="Vertical" Grid.Row="1" Margin="50">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Login :"></TextBlock>
+                <TextBox Name="txtLogin" Width="210"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Mot de passe :"></TextBlock>
+                <TextBox Name="txtMdp" Width="210"></TextBox>
+            </StackPanel>
+            <Button Name="btnConnexion" Content="Connexion" Click="btnConnexion_Click"></Button>
+            <TextBlock Name="txtReponse"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
